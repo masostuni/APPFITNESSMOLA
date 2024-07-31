@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitMe - Il tuo profilo fitness personalizzato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏋️‍♂️ FitMe: Crea il tuo profilo fitness</h1>
+        <div id="app">
+            <div class="question" id="q1">
+                <label for="goal">Qual è il tuo obiettivo principale?</label>
+                <select id="goal">
+                    <option value="">Scegli il tuo obiettivo...</option>
+                    <option value="perdita-peso">Perdita di peso 🏃‍♂️</option>
+                    <option value="aumento-massa">Aumento massa muscolare 💪</option>
+                    <option value="resistenza">Migliorare la resistenza 🏊‍♂️</option>
+                    <option value="flessibilita">Aumentare la flessibilità 🧘‍♀️</option>
+                </select>
+            </div>
+            <div class="question" id="q2" style="display: none;">
+                <label for="frequency">Quante volte alla settimana puoi allenarti?</label>
+                <input type="number" id="frequency" min="1" max="7">
+            </div>
+            <div class="question" id="q3" style="display: none;">
+                <label>Hai accesso a una palestra?</label>
+                <input type="radio" name="gym" value="si" id="gym-yes"> 
+                <label for="gym-yes">Sì</label>
+                <input type="radio" name="gym" value="no" id="gym-no"> 
+                <label for="gym-no">No</label>
+            </div>
+            <div class="question" id="q4" style="display: none;">
+                <label for="experience">Qual è il tuo livello di esperienza?</label>
+                <select id="experience">
+                    <option value="">Seleziona...</option>
+                    <option value="principiante">Principiante 🐣</option>
+                    <option value="intermedio">Intermedio 🐥</option>
+                    <option value="avanzato">Avanzato 🦅</option>
+                </select>
+            </div>
+            <div class="question" id="q5" style="display: none;">
+                <label for="motivation">Quanto sei motivato? (1-10)</label>
+                <input type="range" id="motivation" min="1" max="10" step="1">
+            </div>
+            <button id="next" style="display: none;">Avanti</button>
+            <div id="result" style="display: none;"></div>
+            <div id="userForm" style="display: none;">
+                <h2>📧 Inserisci i tuoi dati per ricevere il profilo via email</h2>
+                <label for="name">Nome</label>
+                <input type="text" id="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <button id="sendEmail">Invia</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
